@@ -1,0 +1,58 @@
+{
+    "name": "pixi.js-tutorial",
+    "version": "1.0.0",
+    "description": "pixi.js-tutorial",
+    "scripts": {
+        "start": "webpack-dev-server --config webpack.dev.js",
+        "start:open": "webpack-dev-server --open --config webpack.dev.js",
+        "build": "webpack --config webpack.prod.js",
+        "eslint": "eslint --ext .js src",
+        "stylelint": "stylelint src/**/**/**/**/*.scss --syntax scss",
+        "stylelint:fix": "stylelint src/**/**/**/**/*.scss --syntax scss --fix",
+        "lint": "npm run stylelint && npm run eslint"
+    },
+    "keywords": [
+        "pixi.js",
+        "tutorial"
+    ],
+    "author": {
+        "name": "Robby",
+        "email": "ta7382@gmail.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "pixi.js": "^5.1.2"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.5.5",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "babel-preset-env": "^1.7.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^3.2.0",
+        "csv-loader": "^3.0.2",
+        "eslint": "^6.3.0",
+        "eslint-config-google": "^0.14.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^4.2.0",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.12.0",
+        "pre-commit": "^1.2.2",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.0",
+        "stylelint": "^10.1.0",
+        "stylelint-config-prettier": "^5.2.0",
+        "stylelint-config-sass-guidelines": "^6.0.0",
+        "stylelint-config-standard": "^18.3.0",
+        "stylelint-order": "^3.1.0",
+        "stylelint-scss": "3.10.1",
+        "webpack": "^4.39.3",
+        "webpack-cli": "^3.3.8",
+        "webpack-dev-server": "^3.8.0",
+        "webpack-merge": "^4.2.2",
+        "xml-loader": "^1.2.1"
+    }
+}
