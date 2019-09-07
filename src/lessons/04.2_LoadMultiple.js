@@ -26,6 +26,7 @@ Loader
     .load(setup);
 
 class Sprite extends PIXI.Sprite {
+    // http://pixijs.download/release/docs/PIXI.Sprite.html#x
     constructor(texture, x = 0, y = 0) {
         super(texture);
         this.x = x;
