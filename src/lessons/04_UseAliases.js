@@ -1,6 +1,9 @@
 import * as PIXI from 'pixi.js';
 
-const Game = new PIXI.Application({
+const Application = PIXI.Application,
+    Sprite = PIXI.Sprite;
+
+const Game = new Application({
     width: 256,
     height: 256,
     antialias: true,
@@ -8,22 +11,17 @@ const Game = new PIXI.Application({
     resolution: 1,
 });
 
+const loader = Game.loader,
+    resources = Game.loader.resources;
+
 document.body.appendChild(Game.view);
 
-Game.loader
+loader
     .add('cat', '../assets/cat.png')
     .load(setup);
 
 function setup() {
-    const cat = new PIXI.Sprite(Game.loader.resources['cat'].texture);
+    const cat = new Sprite(resources['cat'].texture);
     // const cat = new PIXI.Sprite(PIXI.utils.TextureCache['../assets/cat.png']);
     Game.stage.addChild(cat);
-
-    // Game.stage.removeChild(cat);
-    // cat.visible = false; 
 }
-
-// function setup(loader, resources) {
-//     const cat = new PIXI.Sprite(resources['cat'].texture);
-//     Game.stage.addChild(cat);
-// }
