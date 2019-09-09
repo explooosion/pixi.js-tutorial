@@ -26,7 +26,6 @@ import * as PIXI from 'pixi.js';
 import BootStrap from './bootstrap';
 
 import { width, height } from './config';
-import { Function } from 'core-js';
 
 const optins = {
     width,
@@ -47,7 +46,6 @@ class Game extends PIXI.Application {
 
         // initial
         this.status = -2;
-        this.state = Function;
 
         this.play = this.play.bind(this);
         this.won = this.won.bind(this);
